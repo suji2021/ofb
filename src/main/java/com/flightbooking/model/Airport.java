@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -39,6 +41,7 @@ public class Airport {
 	private String code;
 	
 	@OneToMany(mappedBy="destinationAirport")
+	@JsonIgnoreProperties({"flight"})
 	private List<Flight> flights;
 	
 }
