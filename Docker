@@ -3,7 +3,7 @@ FROM openjdk:8-jdk-alpine
 WORKDIR / app/
 
 
-COPY target/FlightBooking-0.0.1-SNAPSHOT.jar/app/.FlightBooking-0.0.1-SNAPSHOT.jar 
+COPY target/FlightBooking-0.0.1-SNAPSHOT.jar FlightBooking-0.0.1-SNAPSHOT.jar 
 
 EXPOSE 8080 
 
