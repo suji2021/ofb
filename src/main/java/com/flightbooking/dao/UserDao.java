@@ -6,6 +6,9 @@ import com.flightbooking.exception.UserNotFoundException;
 import com.flightbooking.model.User;
 
 public interface UserDao {
+	
+	//methods performed for the user model
+	
 		public List<User> getAllUsers();
 		public User getUserById(long userId)throws UserNotFoundException;
 		public User registerUser(User user);

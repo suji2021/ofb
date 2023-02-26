@@ -55,6 +55,8 @@ public class User {
 	@Column(name="mobile")
 	private long mobile;
 	
+	//one to many bidirectional mapping- one user can do many bookings
+	
 	@OneToMany(mappedBy="user")
 	@JsonIgnoreProperties({"user"})
 	private List<Booking> bookings;
