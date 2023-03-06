@@ -78,11 +78,7 @@ public class UserController {
 		return this.userDao.getUserById(userId);
 	}
 	
-	//to get the list of users
-	@GetMapping("/getAllUsers")
-	public List<User> getAllUsers() {
-		return this.userDao.getAllUsers();
-	}
+	
 	
 	
 	//booking
@@ -102,11 +98,12 @@ public class UserController {
 	}
 	
 	@GetMapping("/findByBookingId/{bookingId}")
-	public Booking findByBookingId(@PathVariable long bookingId ){
+	public Booking findByBookingId(@PathVariable long bookingId ) throws BookingNotFoundException{
 		return this.bookingDao.findByBookingId(bookingId);
 	
 }
 	//flight
+	
 	@GetMapping("/getAllFlights")
 	public List<Flight> getAllFlights() {
 		return this.flightDao.getAllFlights();

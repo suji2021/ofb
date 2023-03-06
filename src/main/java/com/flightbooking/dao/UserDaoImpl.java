@@ -52,7 +52,7 @@ public class UserDaoImpl implements UserDao {
 	public String loginUser(User user) throws UserNotFoundException {
 		if(repository.validateUser(user.getEmailId(),user.getPassword()).isEmpty())
 			{
-				throw new UserNotFoundException();
+				throw new UserNotFoundException("Invalid User");
 			}
 		return "Login Successful";
 	}
